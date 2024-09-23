@@ -1,2 +1,14 @@
 def oxford_comma(items):
-    return None
+    if not items:
+        return ""
+    elif len(items) == 1:
+        return items[0]
+    elif len(items) == 2:
+        return " and ".join(items)
+    else:
+        return ", ".join(items[:-1]) + ", and " + items[-1]
+
+# Example usage:
+# print(oxford_comma(["fiddleheads", "okra", "kohlrabi"]))
+# Output: "fiddleheads, okra, and kohlrabi"
+
